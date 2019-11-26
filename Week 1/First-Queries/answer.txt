@@ -1,0 +1,59 @@
+
+**1. What are the different genres?**
+select distinct prime_genre from data;
+
+**2. Which is the genre with the most apps rated?**
+Games
+
+**3. Which is the genre with most apps?**
+select count(track_name), prime_genre from data
+group by prime_genre
+order by count(track_name) DESC
+LIMIT 1;
+
+**4. Which is the one with least?**
+select count(track_name), prime_genre from data
+group by prime_genre
+order by count(track_name) ASC
+LIMIT 1;
+
+**5. Find the top 10 apps most rated.**
+select track_name, rating_count_tot from data
+order by rating_count_tot DESC
+LIMIT 10;
+
+**6. Find the top 10 apps best rated by users.**
+select track_name, user_rating from data
+order by user_rating DESC
+limit 10;
+
+**7. Take a look at the data you retrieved in question 5. Give some insights.**
+The data are as we expected because intagram and facebook are the most apps rated and probably downloaded 
+from apple store.
+
+**8. Take a look at the data you retrieved in question 6. Give some insights.**
+The to app rated is Plant .vs. Zombie that is a game. I believe that is easier to get the top app rated when you aren't the most downloaded app. Some app in the top 10 have less than 1 thousand downloads.
+
+**9. Now compare the data from questions 5 and 6. What do you see?**
+Apps with higher download data, difficult will be in the top 10.
+
+**10. How could you take the top 3 regarding both user ratings and number of votes?**
+The top 3 mean is 4.187. 
+
+select track_name, user_rating, rating_count_tot from data
+order by user_rating DESC, rating_count_tot DESC
+limit 20;
+
+select track_name, user_rating, rating_count_tot from data
+order by rating_count_tot DESC, user_rating DESC
+limit 3;
+
+
+**11. Do people care about the price of an app?**
+select track_name, user_rating, rating_count_tot, price from data
+order by price DESC;
+I'm not sure, because I don't have the number of downloads to compare. But the top 10 most rated apps are'nt free, although they cost less than 10 dollars. 
+
+
+
+
