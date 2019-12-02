@@ -18,9 +18,9 @@ When you are on `main.ipynb`, read the instructions for each cell and provide yo
 
 ## Goals
 
-Do you remember your MySQL project? In this lab, you will examine some MySQL tables from [here](https://relational.fit.cvut.cz/dataset/Stats). This database contains an anonymized dump of all user-contributed content on the Stats Stack Exchange network.
+Do you remember your Postgre project? In this lab, you will examine some SQL tables from [here](https://relational.fit.cvut.cz/dataset/Stats). This database contains an anonymized dump of all user-contributed content on the Stats Stack Exchange network.
 
-You will need to import the `pymysql` library and the `create_engine` function from the `sqlalchemy` library.
+You will need to import the `psycopg2` library and the `create_engine` function from the `sqlalchemy` library.
 
 ```python
 import pymysql
@@ -29,7 +29,7 @@ from sqlalchemy import create_engine
 
 Once your connection is established with the database you will use some basic SELECT queries to retrieve the data in order to answer the questions described next.
 
-:bulb: If you receive import errors for `pymysql` or `sqlalchemy`, it means you need to install them with `pip`.
+:bulb: If you receive import errors for `psycopg2` or `sqlalchemy`, it means you need to install them with `pip`.
 
 ### Challenge Questions
 
@@ -48,24 +48,6 @@ Once your connection is established with the database you will use some basic SE
 ## Deliverables
 
 - `main.ipynb` with your responses to each of the questions above.
-
-## Submission
-
-Upon completion, add your deliverables to git. Then commit git, push to your forked repo, and create the pull request as in the previous labs. **REMEMBER
-
-- Upon completion, commit your code and submit to github. **REMEMBER YOU HAVE ALREADY FORKED THE REPO BEFORE**!!
-
-  ```
-  git add .
-  git commit -m "<lab or project name>"
-  git push origin master
-  ```
-
-- Navigate to your repo and [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
-- Create a pull request with title following this format: **"[<your_campus>][<bootcamp_code>] [<lab/project_name>]<your_name>"**
-  - For instance, if you are doing data bootcamp in Madrid, your name is Marc Pomar and the lab you are working on is `lab-numpy`, your pull request should be named like this: "[MAD][datamad10108] [lab-numpy] Marc Pomar"
-- If you have successfully created the pull request you are done!  CONGRATS :)
-
 ## Resources
 
 [Data Cleaning Tutorial](https://www.tutorialspoint.com/python/python_data_cleansing.html)
